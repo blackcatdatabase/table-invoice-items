@@ -65,7 +65,7 @@ erDiagram
     DECIMAL(12,2) line_total
     CHAR(3) currency
   }
-  INVOICE_ITEMS }o--|| INVOICES : (invoice_id)
+  INVOICE_ITEMS }o--|| INVOICES : "invoice_id"
 ```
 
 ## Indexes
