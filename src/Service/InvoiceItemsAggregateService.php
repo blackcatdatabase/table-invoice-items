@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace BlackCat\Database\Packages\InvoiceItems\Service;
 
-use BlackCat\Core\Database\Database;
+use BlackCat\Core\Database;
 use BlackCat\Database\Packages\InvoiceItems\Dto\InvoiceItemDto;
 use BlackCat\Database\Packages\InvoiceItems\Mapper\InvoiceItemDtoMapper;
 use BlackCat\Database\Packages\InvoiceItems\Repository\InvoiceItemRepository;
