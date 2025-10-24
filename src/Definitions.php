@@ -6,7 +6,7 @@ namespace BlackCat\Database\Packages\InvoiceItems;
 final class Definitions {
     // --- základní metadata ---
     public static function table(): string { return 'invoice_items'; }
-    public static function contractView(): string { return 'v_invoice_items_contract'; }
+    public static function contractView(): string { return 'vw_invoice_items'; }
     /** @return string[] */
     public static function columns(): array { return [ 'id', 'invoice_id', 'line_no', 'description', 'unit_price', 'quantity', 'tax_rate', 'tax_amount', 'line_total', 'currency' ]; }
     public static function pk(): string { return 'id'; }
