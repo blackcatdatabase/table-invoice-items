@@ -17,7 +17,7 @@ use BlackCat\Database\Support\DtoHydrator;
 final class InvoiceItemDtoMapper
 {
     /** @var array<string,string> Column -> DTO property */
-    private const COL_TO_PROP = [ 'tenant_id' => 'tenantId', 'invoice_id' => 'invoiceId', 'line_no' => 'lineNo', 'unit_price' => 'unitPrice', 'tax_rate' => 'taxRate', 'tax_amount' => 'taxAmount', 'line_total' => 'lineTotal' ];
+    private const COL_TO_PROP = [ 'id' => 'id', 'tenant_id' => 'tenantId', 'invoice_id' => 'invoiceId', 'line_no' => 'lineNo', 'description' => 'description', 'unit_price' => 'unitPrice', 'quantity' => 'quantity', 'tax_rate' => 'taxRate', 'tax_amount' => 'taxAmount', 'line_total' => 'lineTotal', 'currency' => 'currency' ];
 
     /** @var string[] */
     private const BOOL_COLS   = [];
