@@ -1,4 +1,4 @@
--- Auto-generated from schema-views-mysql.yaml (map@94ebe6c)
+-- Auto-generated from schema-views-mysql.yaml (map@4ae85c5)
 -- engine: mysql
 -- table:  invoice_items
 
@@ -15,5 +15,7 @@ SELECT
   tax_rate,
   tax_amount,
   line_total,
-  currency
+  currency,
+  created_at,
+  updated_at
 FROM invoice_items;

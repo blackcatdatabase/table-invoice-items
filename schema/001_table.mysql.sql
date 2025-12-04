@@ -1,4 +1,4 @@
--- Auto-generated from schema-map-mysql.yaml (map@94ebe6c)
+-- Auto-generated from schema-map-mysql.yaml (map@4ae85c5)
 -- engine: mysql
 -- table:  invoice_items
 
@@ -14,6 +14,8 @@ CREATE TABLE IF NOT EXISTS invoice_items (
   tax_amount DECIMAL(12,2) NOT NULL,
   line_total DECIMAL(12,2) NOT NULL,
   currency CHAR(3) NOT NULL,
+  created_at DATETIME(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
+  updated_at DATETIME(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6) ON UPDATE CURRENT_TIMESTAMP(6),
   UNIQUE KEY uq_invoice_line (invoice_id, line_no),
   INDEX idx_invoice_items_tenant_invoice (tenant_id, invoice_id),
   CONSTRAINT chk_invoice_items_currency CHECK (currency REGEXP '^[A-Z]{3}$'),

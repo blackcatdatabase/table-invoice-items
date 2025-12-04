@@ -1,4 +1,4 @@
--- Auto-generated from schema-map-postgres.yaml (map@94ebe6c)
+-- Auto-generated from schema-map-postgres.yaml (map@4ae85c5)
 -- engine: postgres
 -- table:  invoice_items
 
@@ -14,6 +14,8 @@ CREATE TABLE IF NOT EXISTS invoice_items (
   tax_amount NUMERIC(12,2) NOT NULL,
   line_total NUMERIC(12,2) NOT NULL,
   currency CHAR(3) NOT NULL,
+  created_at TIMESTAMPTZ(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
+  updated_at TIMESTAMPTZ(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
   CONSTRAINT uq_invoice_line UNIQUE (invoice_id, line_no),
   CONSTRAINT chk_invoice_items_currency CHECK (currency ~ '^[A-Z]{3}$'),
   CONSTRAINT chk_invoice_items_qty CHECK (quantity > 0),

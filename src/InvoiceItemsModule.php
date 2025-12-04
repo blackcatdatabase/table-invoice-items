@@ -46,7 +46,9 @@ SELECT
   tax_rate,
   tax_amount,
   line_total,
-  currency
+  currency,
+  created_at,
+  updated_at
 FROM invoice_items;
 SQL;
         } else {
@@ -63,7 +65,9 @@ SELECT
   tax_rate,
   tax_amount,
   line_total,
-  currency
+  currency,
+  created_at,
+  updated_at
 FROM invoice_items;
 SQL;
         }
