@@ -20,7 +20,9 @@ final class InvoiceItemDto implements \JsonSerializable {
         public readonly string $taxRate,
         public readonly string $taxAmount,
         public readonly string $lineTotal,
-        public readonly string $currency
+        public readonly string $currency,
+        public readonly \DateTimeImmutable $createdAt,
+        public readonly \DateTimeImmutable $updatedAt
     ) {}
 
     /** Suitable for serialization/logging (without large blobs). */
