@@ -9,12 +9,12 @@ Normalized invoice line items.
 | description | TEXT | NO |  | Line description. |
 | id | BIGINT | NO |  | Surrogate primary key. |
 | invoice_id | BIGINT | NO |  | Invoice (FK invoices.id). |
-| line_no | INTEGER | NO |  | Line number within invoice. |
-| line_total | NUMERIC(12,2) | NO |  | Total incl. tax for line. |
-| quantity | INTEGER | NO |  | Quantity (> 0). |
-| tax_amount | NUMERIC(12,2) | NO |  | Tax amount. |
-| tax_rate | NUMERIC(5,2) | NO |  | Tax rate % (0..100). |
-| unit_price | NUMERIC(12,2) | NO |  | Unit price excl. tax. |
+| line_no | INT | NO |  | Line number within invoice. |
+| line_total | DECIMAL(12,2) | NO |  | Total incl. tax for line. |
+| quantity | INT | NO |  | Quantity (> 0). |
+| tax_amount | DECIMAL(12,2) | NO |  | Tax amount. |
+| tax_rate | DECIMAL(5,2) | NO |  | Tax rate % (0..100). |
+| unit_price | DECIMAL(12,2) | NO |  | Unit price excl. tax. |
 
 ## Engine Details
 
@@ -59,5 +59,5 @@ Foreign keys:
 ## Views
 | View | Engine | Flags | File |
 | --- | --- | --- | --- |
-| vw_invoice_items | mysql | algorithm=MERGE, security=INVOKER | [packages\invoice-items\schema\040_views.mysql.sql](https://github.com/blackcatacademy/blackcat-database/packages/invoice-items/schema/040_views.mysql.sql) |
-| vw_invoice_items | postgres |  | [packages\invoice-items\schema\040_views.postgres.sql](https://github.com/blackcatacademy/blackcat-database/packages/invoice-items/schema/040_views.postgres.sql) |
+| vw_invoice_items | mysql | algorithm=MERGE, security=INVOKER | [schema\040_views.mysql.sql](schema\040_views.mysql.sql) |
+| vw_invoice_items | postgres |  | [schema\040_views.postgres.sql](schema\040_views.postgres.sql) |
