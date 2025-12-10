@@ -9,12 +9,12 @@ Normalized invoice line items.
 | description | TEXT | NO |  | Line description. |
 | id | BIGINT | NO |  | Surrogate primary key. |
 | invoice_id | BIGINT | NO |  | Invoice (FK invoices.id). |
-| line_no | INT | NO |  | Line number within invoice. |
-| line_total | DECIMAL(12,2) | NO |  | Total incl. tax for line. |
-| quantity | INT | NO |  | Quantity (> 0). |
-| tax_amount | DECIMAL(12,2) | NO |  | Tax amount. |
-| tax_rate | DECIMAL(5,2) | NO |  | Tax rate % (0..100). |
-| unit_price | DECIMAL(12,2) | NO |  | Unit price excl. tax. |
+| line_no | mysql: INT / postgres: INTEGER | NO |  | Line number within invoice. |
+| line_total | mysql: DECIMAL(12,2) / postgres: NUMERIC(12,2) | NO |  | Total incl. tax for line. |
+| quantity | mysql: INT / postgres: INTEGER | NO |  | Quantity (> 0). |
+| tax_amount | mysql: DECIMAL(12,2) / postgres: NUMERIC(12,2) | NO |  | Tax amount. |
+| tax_rate | mysql: DECIMAL(5,2) / postgres: NUMERIC(5,2) | NO |  | Tax rate % (0..100). |
+| unit_price | mysql: DECIMAL(12,2) / postgres: NUMERIC(12,2) | NO |  | Unit price excl. tax. |
 
 ## Engine Details
 
