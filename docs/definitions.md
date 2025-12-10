@@ -5,16 +5,16 @@ Normalized invoice line items.
 ## Columns
 | Column | Type | Null | Default | Description |
 | --- | --- | --- | --- | --- |
-| currency | CHAR(3) | NO |  | ISO 4217 currency code. |
 | description | TEXT | NO |  | Line description. |
+| unit_price | mysql: DECIMAL(12,2) / postgres: NUMERIC(12,2) | NO |  | Unit price excl. tax. |
 | id | BIGINT | NO |  | Surrogate primary key. |
+| tax_amount | mysql: DECIMAL(12,2) / postgres: NUMERIC(12,2) | NO |  | Tax amount. |
+| line_total | mysql: DECIMAL(12,2) / postgres: NUMERIC(12,2) | NO |  | Total incl. tax for line. |
+| tax_rate | mysql: DECIMAL(5,2) / postgres: NUMERIC(5,2) | NO |  | Tax rate % (0..100). |
 | invoice_id | BIGINT | NO |  | Invoice (FK invoices.id). |
 | line_no | mysql: INT / postgres: INTEGER | NO |  | Line number within invoice. |
-| line_total | mysql: DECIMAL(12,2) / postgres: NUMERIC(12,2) | NO |  | Total incl. tax for line. |
+| currency | CHAR(3) | NO |  | ISO 4217 currency code. |
 | quantity | mysql: INT / postgres: INTEGER | NO |  | Quantity (> 0). |
-| tax_amount | mysql: DECIMAL(12,2) / postgres: NUMERIC(12,2) | NO |  | Tax amount. |
-| tax_rate | mysql: DECIMAL(5,2) / postgres: NUMERIC(5,2) | NO |  | Tax rate % (0..100). |
-| unit_price | mysql: DECIMAL(12,2) / postgres: NUMERIC(12,2) | NO |  | Unit price excl. tax. |
 
 ## Engine Details
 
