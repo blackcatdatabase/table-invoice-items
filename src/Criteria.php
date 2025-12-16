@@ -41,11 +41,11 @@ final class Criteria extends BaseCriteria
         return [ 'description', 'currency' ];
     }
 
-/** Columns allowed in ORDER BY (falls back to filterable() when empty). */
-protected function sortable(): array
-{
-    return [ 'id', 'tenant_id', 'invoice_id', 'line_no', 'description', 'unit_price', 'quantity', 'tax_rate', 'tax_amount', 'line_total', 'currency', 'created_at', 'updated_at' ];
-}
+    /** Columns allowed in ORDER BY (falls back to filterable() when empty). */
+    protected function sortable(): array
+    {
+        return [ 'id', 'tenant_id', 'invoice_id', 'line_no', 'description', 'unit_price', 'quantity', 'tax_rate', 'tax_amount', 'line_total', 'currency', 'created_at', 'updated_at' ];
+    }
 
     /**
      * Whitelist of joinable entities (for safe ->join() usage):
