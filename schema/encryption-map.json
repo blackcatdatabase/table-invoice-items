@@ -1,0 +1,47 @@
+{
+  "tables": {
+    "invoice_items": {
+      "columns": {
+        "created_at": {
+          "strategy": "passthrough"
+        },
+        "currency": {
+          "strategy": "passthrough"
+        },
+        "description": {
+          "strategy": "passthrough"
+        },
+        "id": {
+          "strategy": "passthrough"
+        },
+        "invoice_id": {
+          "strategy": "passthrough"
+        },
+        "line_no": {
+          "strategy": "passthrough"
+        },
+        "line_total": {
+          "strategy": "passthrough"
+        },
+        "quantity": {
+          "strategy": "passthrough"
+        },
+        "tax_amount": {
+          "strategy": "passthrough"
+        },
+        "tax_rate": {
+          "strategy": "passthrough"
+        },
+        "tenant_id": {
+          "strategy": "passthrough"
+        },
+        "unit_price": {
+          "strategy": "passthrough"
+        },
+        "updated_at": {
+          "strategy": "passthrough"
+        }
+      }
+    }
+  }
+}
